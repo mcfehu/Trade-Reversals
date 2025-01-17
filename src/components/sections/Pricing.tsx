@@ -1,47 +1,39 @@
 import React from 'react';
 import Section from '../layout/Section';
-import { Check, AlertCircle, Sparkles, BookOpen } from 'lucide-react';
+import { Sparkles, BookOpen, AlertCircle, CheckCircle } from 'lucide-react';
 import GlowingButton from '../ui/GlowingButton';
 
 const plans = [
   {
     name: "1-Month Plan",
-    price: "49",
+    price: "39",
     interval: "month",
     features: [
       "Real-time Gold & Nasdaq signals",
       "1-3 quality setups daily",
       "Precise entry & exit points",
-      "Private Telegram group access",
-      "24/7 professional support",
-      "Risk management guidance"
+      "Private Telegram group access"
     ]
   },
   {
     name: "3-Month Plan",
-    price: "129",
+    price: "99",
     interval: "quarter",
     popular: true,
     features: [
       "Everything in 1-Month Plan",
-      "Free Trading Ebook ($47 value)",
-      "Priority support",
-      "Advanced trade explanations",
-      "Weekly market analysis",
-      "3 months of signal history"
+      "Free Trading Ebook (£14.99 value)",
+      "Priority support"
     ]
   },
   {
     name: "Lifetime Plan",
-    price: "499",
+    price: "399",
     interval: "one-time",
     features: [
       "Everything in 3-Month Plan",
-      "Lifetime access to signals",
-      "Free Trading Ebook ($47 value)",
-      "VIP support channel",
-      "Monthly strategy sessions",
-      "Complete trade history access"
+      "Free Trading Ebook (£14.99 value)",
+      "VIP support channel"
     ]
   }
 ];
@@ -91,7 +83,7 @@ export default function Pricing() {
                 {plan.name.toUpperCase()}
               </div>
               <div className="flex items-center justify-center gap-2 mb-2">
-                <span className="text-2xl text-blue-200">$</span>
+                <span className="text-2xl text-blue-200">£</span>
                 <span className="text-5xl font-bold text-white">{plan.price}</span>
                 <span className="text-lg text-blue-200">
                   /{plan.interval}
@@ -102,20 +94,20 @@ export default function Pricing() {
             <ul className="space-y-4 mb-8">
               {plan.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
                   <span className="text-blue-100">{feature}</span>
                 </li>
               ))}
             </ul>
 
-            {plan.price === "129" || plan.price === "499" ? (
+            {plan.price === "99" || plan.price === "399" ? (
               <div className="bg-blue-500/10 rounded-lg p-4 mb-6">
                 <div className="flex items-center gap-2 text-blue-300 mb-2">
                   <BookOpen className="h-5 w-5" />
                   <span className="font-medium">Free Trading Ebook Included</span>
                 </div>
                 <p className="text-sm text-blue-200">
-                  Get our comprehensive guide to scalping the futures market ($47 value)
+                  Get our comprehensive guide to scalping the futures market (£14.99 value)
                 </p>
               </div>
             ) : null}

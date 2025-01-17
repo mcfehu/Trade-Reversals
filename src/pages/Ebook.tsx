@@ -73,7 +73,7 @@ export default function Ebook() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <GlowingButton variant="primary" size="large" className="flex items-center justify-center gap-2">
                   <Download className="h-5 w-5" />
-                  Get Instant Access (£19.99)
+                  Get Instant Access (£14.99)
                 </GlowingButton>
                 <GlowingButton variant="secondary" size="large" className="flex items-center justify-center gap-2">
                   <BookOpen className="h-5 w-5" />
@@ -154,7 +154,7 @@ export default function Ebook() {
             </p>
             <GlowingButton variant="primary" size="large" className="flex items-center justify-center gap-2 mx-auto">
               <Download className="h-5 w-5" />
-              Download Now (£19.99)
+              Download Now (£14.99)
             </GlowingButton>
             <p className="mt-4 text-blue-300">
               Due to the nature of digital products, all sales are final. If you have any questions about the eBook before purchasing, feel free to contact us. We're happy to provide more details to ensure this guide meets your needs.
