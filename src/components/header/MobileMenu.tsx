@@ -33,55 +33,55 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </button>
           </div>
           
-          <div className="p-6 space-y-4">
+          <div className="p-6 space-y-1">
             <Link
               to="/edge"
-              className="block text-lg text-blue-200 hover:text-white py-2"
+              className="block text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
               onClick={onClose}
             >
               Our Edge
             </Link>
             <Link
               to="/faq"
-              className="block text-lg text-blue-200 hover:text-white py-2"
+              className="block text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
               onClick={onClose}
             >
               How-To
             </Link>
             <Link
               to="/blog"
-              className="block text-lg text-blue-200 hover:text-white py-2"
+              className="block text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
               onClick={onClose}
             >
               Blog
             </Link>
             <Link
               to="/stats"
-              className="block text-lg text-blue-200 hover:text-white py-2"
+              className="block text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
               onClick={onClose}
             >
               Stats
             </Link>
             <Link
               to="/stories"
-              className="block text-lg text-blue-200 hover:text-white py-2"
+              className="block text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
               onClick={onClose}
             >
               Stories
             </Link>
             <Link
               to="/ebook"
-              className="block text-lg text-blue-200 hover:text-white py-2"
+              className="block text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
               onClick={onClose}
             >
               Ebook
             </Link>
             
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-4 mt-4 border-t border-white/10">
               {user ? (
                 <Link
                   to="/dashboard"
-                  className="flex items-center gap-2 text-lg text-blue-200 hover:text-white py-2"
+                  className="flex items-center gap-2 text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
                   onClick={onClose}
                 >
                   Dashboard
@@ -89,7 +89,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               ) : (
                 <button
                   onClick={onClose}
-                  className="flex items-center gap-2 text-lg text-blue-200 hover:text-white py-2"
+                  className="flex items-center gap-2 text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors w-full text-left"
                 >
                   <LogIn className="h-5 w-5" />
                   Sign In
