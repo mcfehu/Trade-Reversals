@@ -21,18 +21,15 @@ export default function BlogPost() {
     };
 
     try {
-      // Only try navigator.share on secure contexts and mobile devices
       if (window.isSecureContext && /mobile|android|iphone/i.test(navigator.userAgent) && navigator.share) {
         await navigator.share(shareData);
       } else {
-        // Fallback to clipboard
         await navigator.clipboard.writeText(window.location.href);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       }
     } catch (err) {
       console.error('Error sharing:', err);
-      // Fallback to clipboard if share fails
       try {
         await navigator.clipboard.writeText(window.location.href);
         setCopied(true);
@@ -45,40 +42,35 @@ export default function BlogPost() {
 
   useEffect(() => {
     if (post) {
+      // Update page title
       document.title = `${post.title} | Trade Reversals`;
       
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', post.excerpt);
-
-      let canonicalUrl = document.querySelector('link[rel="canonical"]');
-      if (!canonicalUrl) {
-        canonicalUrl = document.createElement('link');
-        canonicalUrl.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalUrl);
-      }
-      canonicalUrl.setAttribute('href', window.location.href);
-
+      // Update meta tags
       const metaTags = {
+        // Open Graph
         'og:title': post.title,
         'og:description': post.excerpt,
         'og:type': 'article',
         'og:image': post.coverImage,
         'og:url': window.location.href,
+        
+        // Twitter
         'twitter:card': 'summary_large_image',
         'twitter:title': post.title,
         'twitter:description': post.excerpt,
         'twitter:image': post.coverImage,
+        
+        // Article specific
         'article:published_time': post.date,
         'article:section': post.tags[0] || 'Trading',
         'article:tag': post.tags.join(','),
-        'keywords': post.tags.join(', ') + ', trading psychology, emotional trading, risk management',
+        
+        // Other
+        'description': post.excerpt,
+        'keywords': post.tags.join(', ') + ', trading psychology, emotional trading, risk management'
       };
 
+      // Update or create meta tags
       Object.entries(metaTags).forEach(([property, content]) => {
         if (content) {
           let meta = document.querySelector(`meta[property="${property}"]`);
@@ -91,6 +83,16 @@ export default function BlogPost() {
         }
       });
 
+      // Update canonical URL
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute('href', window.location.href);
+
+      // Add structured data
       const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -98,17 +100,21 @@ export default function BlogPost() {
         description: post.excerpt,
         image: post.coverImage,
         datePublished: post.date,
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': window.location.href
+        author: {
+          '@type': 'Person',
+          name: post.author.name
         },
         publisher: {
           '@type': 'Organization',
           name: 'Trade Reversals',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://tradereversals.com/logo.png'
+            url: 'https://i.imgur.com/vPJZrJ6.png'
           }
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': window.location.href
         }
       };
 
@@ -123,6 +129,7 @@ export default function BlogPost() {
       document.head.appendChild(scriptTag);
     }
 
+    // Cleanup function
     return () => {
       document.title = 'Trade Reversals';
       const metaTags = document.querySelectorAll('meta[property^="og:"], meta[property^="twitter:"], meta[property^="article:"]');

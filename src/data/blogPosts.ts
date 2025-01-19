@@ -67,7 +67,11 @@ export const blogPosts = [
     date: '2025-01-14',
     coverImage: 'https://i.imgur.com/Pb1r7uX.jpeg',
     tags: ['Trading Psychology', 'Risk Management', 'Trading Strategy'],
-    readTime: 10
+    readTime: 10,
+    author: {
+      name: "Trade Reversals Team",
+      avatar: "https://i.imgur.com/vPJZrJ6.png"
+    }
   }
 ];
 
