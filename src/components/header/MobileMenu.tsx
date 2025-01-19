@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, LogIn } from 'lucide-react';
+import { X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -77,8 +77,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               Ebook
             </Link>
             
-            <div className="pt-4 mt-4 border-t border-white/10">
-              {user ? (
+            {user && (
+              <div className="pt-4 mt-4 border-t border-white/10">
                 <Link
                   to="/dashboard"
                   className="flex items-center gap-2 text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-blue-900/80 hover:bg-blue-800/90 transition-colors"
@@ -86,16 +86,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 >
                   Dashboard
                 </Link>
-              ) : (
-                <button
-                  onClick={onClose}
-                  className="flex items-center gap-2 text-lg text-blue-200 hover:text-white py-3 px-4 rounded-lg bg-blue-900/80 hover:bg-blue-800/90 transition-colors w-full text-left"
-                >
-                  <LogIn className="h-5 w-5" />
-                  Sign In
-                </button>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
