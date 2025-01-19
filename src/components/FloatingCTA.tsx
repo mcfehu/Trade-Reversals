@@ -5,7 +5,7 @@ export default function FloatingCTA() {
   return (
     <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-40">
       <a 
-        href="https://t.me/+gBblYCDDioMyM2E0" 
+        href="https://t.me/+JnBiDj_sUME5M2Nk" 
         target="_blank" 
         rel="noopener noreferrer"
       >

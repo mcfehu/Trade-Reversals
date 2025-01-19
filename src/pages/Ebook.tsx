@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import GlowingButton from '../components/ui/GlowingButton';
+import PreviewModal from '../components/ui/PreviewModal';
 import { BookOpen, CheckCircle, Download, Star } from 'lucide-react';
 
 const benefits = [
@@ -45,7 +46,14 @@ const chapters = [
   }
 ];
 
+const previewImages = [
+  'https://i.imgur.com/fUcprND.png',
+  'https://i.imgur.com/aso8pP4.png'
+];
+
 export default function Ebook() {
+  const [previewOpen, setPreviewOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-900">
       <Header />
@@ -75,7 +83,12 @@ export default function Ebook() {
                   <Download className="h-5 w-5" />
                   Get Instant Access (£14.99)
                 </GlowingButton>
-                <GlowingButton variant="secondary" size="large" className="flex items-center justify-center gap-2">
+                <GlowingButton 
+                  variant="secondary" 
+                  size="large" 
+                  className="flex items-center justify-center gap-2"
+                  onClick={() => setPreviewOpen(true)}
+                >
                   <BookOpen className="h-5 w-5" />
                   Preview Sample
                 </GlowingButton>
@@ -85,7 +98,7 @@ export default function Ebook() {
               <div className="relative w-full max-w-md mx-auto">
                 <div className="relative rounded-lg overflow-hidden shadow-2xl bg-gradient-to-b from-blue-900 to-blue-950">
                   <img
-                    src="https://i.imgur.com/zxkZ9DN.jpeg"
+                    src="https://i.imgur.com/vPJZrJ6.png"
                     alt="The Ultimate Guide to Scalping the Futures Market"
                     className="w-full h-auto"
                   />
@@ -162,6 +175,13 @@ export default function Ebook() {
           </div>
         </div>
       </div>
+
+      {/* Preview Modal */}
+      <PreviewModal
+        isOpen={previewOpen}
+        onClose={() => setPreviewOpen(false)}
+        images={previewImages}
+      />
     </div>
   );
 }

@@ -7,20 +7,20 @@ import GlowingButton from '../ui/GlowingButton';
 const features = [
   {
     icon: TrendingUp,
-    title: 'Market Analysis',
-    description: 'Deep understanding of market dynamics and price action across multiple timeframes.',
+    title: "Market Analysis",
+    description: "Deep understanding of market dynamics and price action across multiple timeframes.",
     color: 'from-amber-500 to-amber-600'
   },
   {
     icon: LineChart,
-    title: 'Trading Experience',
-    description: '10+ years of trading in the futures markets.',
+    title: "Trading Experience",
+    description: "10+ years of trading in the futures markets.",
     color: 'from-amber-500 to-amber-600'
   },
   {
     icon: Users,
-    title: 'Growing Community',
-    description: 'Join our active community of dedicated traders.',
+    title: "Growing Community",
+    description: "Join our active community of dedicated traders.",
     color: 'from-amber-500 to-amber-600'
   }
 ];
@@ -76,7 +76,7 @@ export default function About() {
 
         <div className="mt-16 text-center">
           <a 
-            href="https://t.me/+gBblYCDDioMyM2E0" 
+            href="https://t.me/+JnBiDj_sUME5M2Nk" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block"

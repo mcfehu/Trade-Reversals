@@ -3,10 +3,10 @@ import { Target, TrendingUp, Clock } from 'lucide-react';
 
 const stats = [
   { 
-    label: 'Success Rate', 
+    label: 'December Success Rate', 
     value: '73%', 
     icon: Target, 
-    subtitle: 'Over 15 Trades' 
+    subtitle: '11 Wins from 15 Trades' 
   },
   { 
     label: 'Monthly Return', 

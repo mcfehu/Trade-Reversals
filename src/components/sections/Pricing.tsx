@@ -40,8 +40,7 @@ const plans = [
 
 const transparency = [
   "No hidden fees or extra charges",
-  "Cancel your subscription anytime",
-  "30-day money-back guarantee"
+  "Cancel your subscription anytime"
 ];
 
 export default function Pricing() {
@@ -113,7 +112,7 @@ export default function Pricing() {
             ) : null}
 
             <a 
-              href="https://t.me/+gBblYCDDioMyM2E0" 
+              href="https://t.me/+JnBiDj_sUME5M2Nk" 
               target="_blank" 
               rel="noopener noreferrer"
               className="block"

@@ -1,18 +1,12 @@
 import React from 'react';
 import Section from '../../layout/Section';
-import ContactForm from './ContactForm';
-import { Mail, MessageCircle, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "support@tradereversals.com"
-  },
-  {
-    icon: MessageCircle,
-    title: "Live Chat",
-    content: "24/7 Support Available"
+    content: "traderevs@gmail.com"
   },
   {
     icon: MapPin,
@@ -32,21 +26,20 @@ export default function Contact() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <div className="space-y-8 mb-8">
-              {contactInfo.map((item) => (
-                <div key={item.title} className="flex items-start">
-                  <item.icon className="h-6 w-6 text-blue-600 mt-1" />
-                  <div className="ml-4">
-                    <h3 className="font-medium text-gray-900">{item.title}</h3>
-                    <p className="text-gray-600">{item.content}</p>
-                  </div>
+        <div className="max-w-2xl mx-auto">
+          <div className="space-y-8">
+            {contactInfo.map((item) => (
+              <div key={item.title} className="flex items-center gap-6 p-6 bg-gray-50 rounded-lg">
+                <div className="p-3 bg-blue-100 rounded-full">
+                  <item.icon className="h-6 w-6 text-blue-600" />
                 </div>
-              ))}
-            </div>
+                <div>
+                  <h3 className="font-medium text-gray-900 mb-1">{item.title}</h3>
+                  <p className="text-gray-600">{item.content}</p>
+                </div>
+              </div>
+            ))}
           </div>
-          <ContactForm />
         </div>
       </div>
     </Section>
