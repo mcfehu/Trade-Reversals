@@ -7,23 +7,23 @@ const recentSignals = [
     id: 1,
     market: 'GOLD',
     type: 'LONG',
-    entry: 2024.50,
-    stopLoss: 2020.30,
-    takeProfit: 2035.80,
+    entry: 2731.40,
+    stopLoss: 2729.10,
+    takeProfit: 2735.80,
     profit: 2.45,
     timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
-    status: 'active'
+    status: 'Recent'
   },
   {
     id: 2,
-    market: 'NASDAQ',
-    type: 'SHORT',
-    entry: 17850,
-    stopLoss: 17880,
-    takeProfit: 17780,
-    profit: 1.8,
+    market: 'GOLD',
+    type: 'LONG',
+    entry: 2731.2,
+    stopLoss: 2727.5,
+    takeProfit: 2734.9,
+    profit: 3.7,
     timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
-    status: 'active'
+    status: 'Recent'
   }
 ];
 
@@ -31,7 +31,7 @@ export default function SignalCard() {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
       <div className="flex items-center justify-between mb-6">
-        <span className="text-lg font-medium text-white">Active Signals</span>
+        <span className="text-lg font-medium text-white">Latest Signals</span>
       </div>
       
       <div className="space-y-4">
@@ -61,15 +61,15 @@ export default function SignalCard() {
             <div className="grid grid-cols-3 gap-4 mt-4 pt-4 border-t border-white/10">
               <div>
                 <div className="text-sm text-blue-300">Entry</div>
-                <div className="text-white font-medium">{signal.entry}</div>
+                <div className="text-white font-medium">{signal.entry.toFixed(2)}</div>
               </div>
               <div>
                 <div className="text-sm text-blue-300">Stop Loss</div>
-                <div className="text-red-400 font-medium">{signal.stopLoss}</div>
+                <div className="text-red-400 font-medium">{signal.stopLoss.toFixed(2)}</div>
               </div>
               <div>
                 <div className="text-sm text-blue-300">Take Profit</div>
-                <div className="text-green-400 font-medium">{signal.takeProfit}</div>
+                <div className="text-green-400 font-medium">{signal.takeProfit.toFixed(2)}</div>
               </div>
             </div>
           </div>
