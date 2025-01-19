@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Kevin",
     role: "Professional Futures Trader",
-    content: "The precision of Trade Reversals' signals is remarkable. Their focus on key reversal points in Gold futures has already helped me improve my entry timing.",
+    content: "Good signals. Their focus on key reversal points in Gold futures has already helped me improve my entry timing.",
     metrics: {
       label: "First Week Return",
       value: "+6.2%"
@@ -24,8 +24,8 @@ const testimonials = [
   },
   {
     name: "Uwe",
-    role: "Institutional Trader",
-    content: "Their Nasdaq signals have been particularly impressive. The technical analysis behind each trade setup shows deep market understanding.",
+    role: "Scalper",
+    content: "Their Nasdaq signals have been outstanding, with each trade setup reflecting a clear and strategic approach to the market.",
     metrics: {
       label: "Average R:R",
       value: "1:2.3"
@@ -34,7 +34,7 @@ const testimonials = [
   {
     name: "Kayla",
     role: "Futures Specialist",
-    content: "The quality of support and education alongside the signals has been invaluable. It's not just about following trades, but understanding the market context.",
+    content: "The quality of the signals provided has been invaluable. It's not just about following trades, but benefiting from their precision and alignment with market context..",
     metrics: {
       label: "Monthly Growth",
       value: "+8.7%"
@@ -42,7 +42,7 @@ const testimonials = [
   },
   {
     name: "Sophie",
-    role: "Portfolio Manager",
+    role: "Day Trader",
     content: "Trade Reversals has brought a systematic approach to my trading. Their focus on high-probability setups and proper position sizing is refreshing.",
     metrics: {
       label: "Success Rate",
