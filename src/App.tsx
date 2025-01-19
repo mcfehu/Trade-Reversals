@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/edge" element={<Edge />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/blog/:id/*" element={<BlogPost />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/stories" element={<Stories />} />
           <Route path="/privacy" element={<Privacy />} />
