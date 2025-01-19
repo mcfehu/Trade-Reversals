@@ -33,7 +33,7 @@ const plans = [
     features: [
       "Everything in 3-Month Plan",
       "Free Trading Ebook (£14.99 value)",
-      "VIP support channel"
+      "Priority support"
     ]
   }
 ];
