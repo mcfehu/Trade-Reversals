@@ -71,7 +71,7 @@ export default function Edge() {
               Ready to experience trading with our proven edge?
             </p>
             <a 
-              href="https://t.me/+gBblYCDDioMyM2E0" 
+              href="https://t.me/+Lpdf18Y6A3xjYTA8" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block"

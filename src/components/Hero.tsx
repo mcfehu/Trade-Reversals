@@ -21,7 +21,7 @@ export default function Hero() {
             <div className="animate-slide-in animation-delay-200">
               <div className="flex items-center gap-4">
                 <a 
-                  href="https://t.me/+JnBiDj_sUME5M2Nk" 
+                  href="https://t.me/+Lpdf18Y6A3xjYTA8" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >

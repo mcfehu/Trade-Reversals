@@ -112,7 +112,7 @@ export default function Pricing() {
             ) : null}
 
             <a 
-              href="https://t.me/+JnBiDj_sUME5M2Nk" 
+              href="https://t.me/+Lpdf18Y6A3xjYTA8" 
               target="_blank" 
               rel="noopener noreferrer"
               className="block"
