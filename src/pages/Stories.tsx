@@ -19,7 +19,7 @@ const testimonials = [
     content: "What sets Trade Reversals apart is their risk management approach. Every signal comes with clear entry and exit points, making it easy to maintain discipline.",
     metrics: {
       label: "Win Rate",
-      value: "71%"
+      value: "25%"
     }
   },
   {
@@ -46,7 +46,7 @@ const testimonials = [
     content: "Trade Reversals has brought a systematic approach to my trading. Their focus on high-probability setups and proper position sizing is refreshing.",
     metrics: {
       label: "Success Rate",
-      value: "75%"
+      value: "15%"
     }
   }
 ];
