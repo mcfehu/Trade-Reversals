@@ -80,7 +80,7 @@ export default function Ebook() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://www.amazon.com/dp/B0DTJCKM7H" 
+                  href="https://www.amazon.co.uk/Ultimate-Guide-Trading-Futures-Market-ebook/dp/B0DTJCKM7H/ref=mp_s_a_1_1?crid=2T5A19AIBYOGR&dib=eyJ2IjoiMSJ9.9E1sj5l-TymhPrh1q5V20uH0_2BSsB7AIyNBHjIhcxxf8AJHfoN9fqkc93CDD6rO0SY5R46kQjw5sMiEtA32Jb4mMlAkFoEBuid0cVz4c8ApU5C0oVobM79-Dza1jv5zkj51yjzbPY7ezaSyXdRF6xOX3lc5LqLtDKlTWNfI6yvXumsisHoNkY2_4gWG5qxk2uDiPM9lUi0gCjnb_zgGrg.4kahoC_cul8uvs4P9SzyVuw7f1RBA7QVoP57ReJn4Jk&dib_tag=se&keywords=the+ultimate+guide+to+day+trading+the+futures+market&nsdOptOutParam=true&qid=1737451360&sprefix=the+ultimate+guide+to+day+trading+the+fitures+market%2Caps%2C138&sr=8-1" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -172,7 +172,7 @@ export default function Ebook() {
               Join successful traders who are already benefiting from our professional scalping strategies
             </p>
             <a 
-              href="https://www.amazon.com/dp/B0DTJCKM7H" 
+              href="https://www.amazon.co.uk/Ultimate-Guide-Trading-Futures-Market-ebook/dp/B0DTJCKM7H/ref=mp_s_a_1_1?crid=2T5A19AIBYOGR&dib=eyJ2IjoiMSJ9.9E1sj5l-TymhPrh1q5V20uH0_2BSsB7AIyNBHjIhcxxf8AJHfoN9fqkc93CDD6rO0SY5R46kQjw5sMiEtA32Jb4mMlAkFoEBuid0cVz4c8ApU5C0oVobM79-Dza1jv5zkj51yjzbPY7ezaSyXdRF6xOX3lc5LqLtDKlTWNfI6yvXumsisHoNkY2_4gWG5qxk2uDiPM9lUi0gCjnb_zgGrg.4kahoC_cul8uvs4P9SzyVuw7f1RBA7QVoP57ReJn4Jk&dib_tag=se&keywords=the+ultimate+guide+to+day+trading+the+futures+market&nsdOptOutParam=true&qid=1737451360&sprefix=the+ultimate+guide+to+day+trading+the+fitures+market%2Caps%2C138&sr=8-1" 
               target="_blank" 
               rel="noopener noreferrer"
             >
