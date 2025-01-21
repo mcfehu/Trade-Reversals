@@ -79,10 +79,16 @@ export default function Ebook() {
                 <span>Trusted by Professional Traders</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <GlowingButton variant="primary" size="large" className="flex items-center justify-center gap-2">
-                  <Download className="h-5 w-5" />
-                  Get Instant Access (£14.99)
-                </GlowingButton>
+                <a 
+                  href="https://www.amazon.com/dp/B0DTJCKM7H" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <GlowingButton variant="primary" size="large" className="flex items-center justify-center gap-2">
+                    <Download className="h-5 w-5" />
+                    Buy on Amazon
+                  </GlowingButton>
+                </a>
                 <GlowingButton 
                   variant="secondary" 
                   size="large" 
@@ -165,10 +171,16 @@ export default function Ebook() {
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
               Join successful traders who are already benefiting from our professional scalping strategies
             </p>
-            <GlowingButton variant="primary" size="large" className="flex items-center justify-center gap-2 mx-auto">
-              <Download className="h-5 w-5" />
-              Download Now (£14.99)
-            </GlowingButton>
+            <a 
+              href="https://www.amazon.com/dp/B0DTJCKM7H" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <GlowingButton variant="primary" size="large" className="flex items-center justify-center gap-2 mx-auto">
+                <Download className="h-5 w-5" />
+                Buy on Amazon
+              </GlowingButton>
+            </a>
             <p className="mt-4 text-blue-300">
               Due to the nature of digital products, all sales are final. If you have any questions about the eBook before purchasing, feel free to contact us. We're happy to provide more details to ensure this guide meets your needs.
             </p>
