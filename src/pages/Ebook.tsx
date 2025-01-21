@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import GlowingButton from '../components/ui/GlowingButton';
 import PreviewModal from '../components/ui/PreviewModal';
@@ -51,8 +51,24 @@ const previewImages = [
   'https://i.imgur.com/aso8pP4.png'
 ];
 
+declare global {
+  interface Window {
+    ml: any;
+  }
+}
+
 export default function Ebook() {
   const [previewOpen, setPreviewOpen] = useState(false);
+
+  useEffect(() => {
+    // Initialize MailerLite form
+    if (window.ml) {
+      window.ml('show', {
+        embedType: 'embed',
+        embedId: 'yxZdqr'
+      });
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-900">
@@ -114,6 +130,11 @@ export default function Ebook() {
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-400/10 rounded-full blur-xl"></div>
               </div>
             </div>
+          </div>
+
+          {/* MailerLite Form Section */}
+          <div className="w-full max-w-2xl mx-auto p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/10 mb-20">
+              <div className="ml-embedded" data-form="yxZdqr"></div>
           </div>
 
           {/* Benefits Section */}
