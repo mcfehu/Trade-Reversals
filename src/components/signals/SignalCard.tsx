@@ -9,7 +9,7 @@ const recentSignals = [
     type: 'LONG',
     entry: 21700.75,
     stopLoss: 21677.5,
-    takeProfit: 21724.0,
+    takeProfit: 21723.5,
     profit: 2.45,
     timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
     status: 'Recent'

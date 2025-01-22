@@ -61,13 +61,29 @@ export default function Ebook() {
   const [previewOpen, setPreviewOpen] = useState(false);
 
   useEffect(() => {
+    // Create a div for the form if it doesn't exist
+    let formDiv = document.getElementById('mlb2-144140002997044539');
+    if (!formDiv) {
+      formDiv = document.createElement('div');
+      formDiv.id = 'mlb2-144140002997044539';
+      formDiv.className = 'ml-form-embedContainer ml-subscribe-form ml-subscribe-form-144140002997044539';
+      
+      // Get the form container and append the form div
+      const formContainer = document.getElementById('mailerlite-form-container');
+      if (formContainer) {
+        formContainer.appendChild(formDiv);
+      }
+    }
+
     // Initialize MailerLite form
     if (window.ml) {
-      window.ml('show', {
-        embedType: 'embed',
-        embedId: 'yxZdqr'
-      });
+      window.ml('accounts', '1289659', 'y7m4j1b8n9', 'load');
     }
+
+    return () => {
+      // Cleanup
+      formDiv?.remove();
+    };
   }, []);
 
   return (
@@ -133,8 +149,8 @@ export default function Ebook() {
           </div>
 
           {/* MailerLite Form Section */}
-          <div className="w-full max-w-2xl mx-auto p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/10 mb-20">
-              <div className="ml-embedded" data-form="yxZdqr"></div>
+          <div id="mailerlite-form-container" className="w-full max-w-2xl mx-auto p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/10 mb-20">
+            {/* Form will be injected here by MailerLite */}
           </div>
 
           {/* Benefits Section */}

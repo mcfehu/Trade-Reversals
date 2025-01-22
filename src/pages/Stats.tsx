@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
+import FTMOPromotion from '../components/FTMOPromotion';
 import { TrendingUp, Target, BarChart3, ArrowUpRight, ArrowDownRight, Calendar, Clock, ChevronDown, ChevronUp } from 'lucide-react';
 
 // Performance data - December only
@@ -161,6 +162,11 @@ export default function Stats() {
                 </div>
               )}
             </div>
+          </div>
+
+          {/* Add FTMO Promotion */}
+          <div className="mt-16">
+            <FTMOPromotion />
           </div>
         </div>
       </div>

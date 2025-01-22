@@ -4,6 +4,7 @@ import BlogPostEditor from '../components/blog/admin/BlogPostEditor';
 import BlogPostList from '../components/blog/admin/BlogPostList';
 import TestimonialForm from '../components/testimonials/admin/TestimonialForm';
 import TestimonialList from '../components/testimonials/admin/TestimonialList';
+import FTMOPromotion from '../components/FTMOPromotion';
 import { FileText, Users, BookOpen, LayoutDashboard, Upload } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
@@ -105,67 +106,74 @@ export default function Dashboard() {
           {/* Content */}
           <div className="space-y-6">
             {activeTab === 'overview' && (
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
-                  <div className="space-y-3">
-                    <button
-                      onClick={() => {
-                        setActiveTab('blog');
-                        setShowBlogEditor(true);
-                      }}
-                      className="w-full text-left px-4 py-2 rounded-lg bg-white/5 text-blue-200 hover:bg-white/10"
-                    >
-                      Create Blog Post
-                    </button>
-                    <button
-                      onClick={() => {
-                        setActiveTab('stats');
-                      }}
-                      className="w-full text-left px-4 py-2 rounded-lg bg-white/5 text-blue-200 hover:bg-white/10"
-                    >
-                      Upload Performance Report
-                    </button>
-                    <button
-                      onClick={() => {
-                        setActiveTab('testimonials');
-                        setShowTestimonialForm(true);
-                      }}
-                      className="w-full text-left px-4 py-2 rounded-lg bg-white/5 text-blue-200 hover:bg-white/10"
-                    >
-                      Add Testimonial
-                    </button>
+              <>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
+                    <div className="space-y-3">
+                      <button
+                        onClick={() => {
+                          setActiveTab('blog');
+                          setShowBlogEditor(true);
+                        }}
+                        className="w-full text-left px-4 py-2 rounded-lg bg-white/5 text-blue-200 hover:bg-white/10"
+                      >
+                        Create Blog Post
+                      </button>
+                      <button
+                        onClick={() => {
+                          setActiveTab('stats');
+                        }}
+                        className="w-full text-left px-4 py-2 rounded-lg bg-white/5 text-blue-200 hover:bg-white/10"
+                      >
+                        Upload Performance Report
+                      </button>
+                      <button
+                        onClick={() => {
+                          setActiveTab('testimonials');
+                          setShowTestimonialForm(true);
+                        }}
+                        className="w-full text-left px-4 py-2 rounded-lg bg-white/5 text-blue-200 hover:bg-white/10"
+                      >
+                        Add Testimonial
+                      </button>
+                    </div>
                   </div>
-                </div>
 
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-lg font-semibold text-white mb-4">Recent Activity</h3>
-                  <div className="space-y-4">
-                    <div className="text-blue-200">
-                      <p className="text-sm">Latest blog post:</p>
-                      <p className="font-medium">Understanding Market Reversals</p>
-                    </div>
-                    <div className="text-blue-200">
-                      <p className="text-sm">Latest performance report:</p>
-                      <p className="font-medium">February 2024 Report</p>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <h3 className="text-lg font-semibold text-white mb-4">Recent Activity</h3>
+                    <div className="space-y-4">
+                      <div className="text-blue-200">
+                        <p className="text-sm">Latest blog post:</p>
+                        <p className="font-medium">Understanding Market Reversals</p>
+                      </div>
+                      <div className="text-blue-200">
+                        <p className="text-sm">Latest performance report:</p>
+                        <p className="font-medium">February 2024 Report</p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-lg font-semibold text-white mb-4">Statistics</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="text-sm text-blue-300">Total Blog Posts</div>
-                      <div className="text-2xl font-bold text-white">24</div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-blue-300">Total Testimonials</div>
-                      <div className="text-2xl font-bold text-white">18</div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <h3 className="text-lg font-semibold text-white mb-4">Statistics</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <div className="text-sm text-blue-300">Total Blog Posts</div>
+                        <div className="text-2xl font-bold text-white">24</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-blue-300">Total Testimonials</div>
+                        <div className="text-2xl font-bold text-white">18</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                
+                {/* Add FTMO Promotion */}
+                <div className="mt-8">
+                  <FTMOPromotion />
+                </div>
+              </>
             )}
 
             {activeTab === 'blog' && (
