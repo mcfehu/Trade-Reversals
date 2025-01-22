@@ -16,7 +16,7 @@ const benefits = [
   {
     icon: DollarSign,
     title: "Start from £79",
-    description: "Begin your journey to becoming a funded trader from just $155"
+    description: "Begin your journey to becoming a funded trader from just £79"
   }
 ];
 
