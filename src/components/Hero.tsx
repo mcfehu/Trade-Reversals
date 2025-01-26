@@ -26,10 +26,10 @@ export default function Hero() {
                   rel="noopener noreferrer"
                 >
                   <GlowingButton variant="secondary" size="large">
-                    Get VIP Access
+                    Join Free Channel
                   </GlowingButton>
                 </a>
-                <span className="text-blue-200">Join our public Telegram channel</span>
+                <span className="text-blue-200">Get started with our public signals</span>
               </div>
             </div>
             <TrustIndicators />
